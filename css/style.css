@@ -44,3 +44,30 @@ body {
 .logo {
   width: 50px;
 }
+
+.hero-text-container {
+  /* one way to center something */
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-heading {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.main-hero-heading {
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+}
+
+.sub-hero-heading {
+  display: block;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 17px;
+}
