@@ -89,6 +89,7 @@ body {
 
 .btn:link,
 .btn:visited {
+  position: relative;
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
@@ -110,6 +111,33 @@ body {
 .btn-white {
   background-color: #fff;
   color: #777;
+}
+
+.btn::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  z-index: -5;
+  transition: all 0.4s;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-white::after {
+  background-color: #fff;
+}
+
+.btn-animated {
+  animation: moveButtonUp 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards; /* automatically applies the styles at 0% before animation starts*/
 }
 
 /* ANIMATIONS */
@@ -143,5 +171,17 @@ body {
   100% {
     transform: translate(0);
     opacity: 1;
+  }
+}
+
+@keyframes moveButtonUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
   }
 }
