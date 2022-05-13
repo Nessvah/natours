@@ -9,16 +9,17 @@
 }
 
 html {
-  box-sizing: border-box;
+  font-size: 62.5%;
 }
 
 body {
+  box-sizing: border-box;
   font-family: "Lato", sans-serif;
+  font-size: 1.6rem;
   font-weight: 400;
-  font-size: 16px;
   line-height: 1.7; /* 1.7 times bigger */
   color: #777;
-  padding: 30px;
+  padding: 3rem;
 }
 
 .header {
@@ -37,12 +38,12 @@ body {
 
 .logo-container {
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 4rem;
+  left: 4rem;
 }
 
 .logo {
-  width: 50px;
+  width: 5rem;
 }
 
 .hero-text-container {
@@ -57,7 +58,7 @@ body {
 .hero-heading {
   color: #fff;
   text-transform: uppercase;
-  margin-bottom: 60px;
+  margin-bottom: 6rem;
 
   /* fix some shaking due to animations */
   backface-visibility: hidden;
@@ -65,9 +66,9 @@ body {
 
 .main-hero-heading {
   display: block;
-  font-size: 60px;
+  font-size: 6rem;
   font-weight: 400;
-  letter-spacing: 35px;
+  letter-spacing: 3.5rem;
   animation: moveInLeft 1.5s ease-in-out;
 
   /* shorthand above 
@@ -79,9 +80,9 @@ body {
 
 .sub-hero-heading {
   display: block;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 400;
-  letter-spacing: 17px;
+  letter-spacing: 1.7rem;
   animation: moveInRight 1.5s ease-in-out;
 }
 
@@ -93,19 +94,20 @@ body {
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 15px 40px;
-  border-radius: 100px;
+  padding: 1.5rem 4rem;
+  border-radius: 10rem;
   transition: all 0.2s; /* making animation more natural */
+  font-size: 1.6rem;
 }
 
 .btn:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
 }
 
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
 }
 
 .btn-white {
@@ -145,11 +147,11 @@ body {
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-10rem);
   }
 
   80% {
-    transform: translateX(10px);
+    transform: translateX(1rem);
   }
 
   100% {
@@ -161,11 +163,11 @@ body {
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(10rem);
   }
 
   80% {
-    transform: translateX(-10px);
+    transform: translateX(-1rem);
   }
 
   100% {
@@ -177,7 +179,7 @@ body {
 @keyframes moveButtonUp {
   0% {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(4rem);
   }
 
   100% {
