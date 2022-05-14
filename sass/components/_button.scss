@@ -1,0 +1,57 @@
+/* BUTTON */
+
+.btn {
+  &:link,
+  &:visited {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1.5rem 4rem;
+    border-radius: 10rem;
+    transition: all 0.2s; /* making animation more natural */
+    font-size: 1.6rem;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.3);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.3);
+  }
+
+  &--white {
+    background-color: $color-white;
+    color: $color-grey;
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    z-index: -5;
+    transition: all 0.4s;
+  }
+
+  &--animated {
+    animation: moveButtonUp 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards; /* automatically applies the styles at 0% before animation starts*/
+  }
+}
