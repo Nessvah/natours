@@ -21,31 +21,6 @@ body {
   padding: 3rem;
 }
 
-.header {
-  height: 95vh;
-  position: relative;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.801), rgba(40, 180, 133, 0.801)), url(/img/hero.jpg);
-  background-size: cover;
-  background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-}
-.header__logo-container {
-  position: absolute;
-  top: 4rem;
-  left: 4rem;
-}
-.header__logo {
-  width: 5rem;
-}
-.header__text-container {
-  /* one way to center something */
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
 .hero-heading {
   color: #fff;
   text-transform: uppercase;
@@ -73,6 +48,43 @@ body {
   animation: moveInRight 1.5s ease-in-out;
 }
 
+/* ANIMATIONS */
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+@keyframes moveButtonUp {
+  0% {
+    opacity: 0;
+    transform: translateY(4rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
 /* BUTTON */
 .btn:link, .btn:visited {
   position: relative;
@@ -122,42 +134,29 @@ body {
   /* automatically applies the styles at 0% before animation starts*/
 }
 
-/* ANIMATIONS */
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem);
-  }
-  80% {
-    transform: translateX(1rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
+.header {
+  height: 95vh;
+  position: relative;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.801), rgba(40, 180, 133, 0.801)), url(/img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(10rem);
-  }
-  80% {
-    transform: translateX(-1rem);
-  }
-  100% {
-    transform: translate(0);
-    opacity: 1;
-  }
+.header__logo-container {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
 }
-@keyframes moveButtonUp {
-  0% {
-    opacity: 0;
-    transform: translateY(4rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
+.header__logo {
+  width: 5rem;
+}
+.header__text-container {
+  /* one way to center something */
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 /*# sourceMappingURL=main.css.map */
