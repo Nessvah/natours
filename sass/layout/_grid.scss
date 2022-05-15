@@ -1,0 +1,30 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.row {
+  max-width: $grid-width;
+  background-color: #eee;
+  margin: 0 auto;
+
+  &:not(:last-child) {
+    margin-bottom: $vertical-gap;
+  }
+
+  @include clearfix;
+
+  [class^="col-"] {
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: $horizontal-gap;
+    }
+  }
+
+  .col-1of2 {
+    width: calc((100% - #{$horizontal-gap}) / 2);
+  }
+
+  .col-1of3 {
+    width: calc((100% - 2 * #{$horizontal-gap}) / 3);
+  }
+}
