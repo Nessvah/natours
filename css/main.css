@@ -67,6 +67,20 @@ body {
   text-shadow: 5px 1rem 2rem rgba(0, 0, 0, 0.4);
 }
 
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+}
+
+.text {
+  font-size: 1.6rem;
+}
+.text:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
 /* ANIMATIONS */
 @keyframes moveInLeft {
   0% {
@@ -192,6 +206,32 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+.row {
+  max-width: 114rem;
+  background-color: #eee;
+  margin: 0 auto;
+}
+.row:not(:last-child) {
+  margin-bottom: 8rem;
+}
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row [class^=col-] {
+  float: left;
+}
+.row [class^=col-]:not(:last-child) {
+  margin-right: 2rem;
+}
+.row .col-1of2 {
+  width: calc((100% - 2rem) / 2);
+}
+.row .col-1of3 {
+  width: calc((100% - 2 * 2rem) / 3);
 }
 
 .section-about {
