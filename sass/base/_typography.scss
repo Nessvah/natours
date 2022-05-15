@@ -56,3 +56,17 @@
     text-shadow: 5px 1rem 2rem rgba($color-black, 0.4);
   }
 }
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppecase;
+}
+
+.text {
+  font-size: 1.6rem;
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
