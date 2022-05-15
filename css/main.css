@@ -48,6 +48,25 @@ body {
   animation: moveInRight 1.5s ease-in-out;
 }
 
+.heading-secondary {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  display: inline-block;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  color: transparent;
+  z-index: 5;
+  transition: all 0.2s;
+}
+.heading-secondary:hover {
+  transform: skewY(2deg) skewX(5deg);
+  text-shadow: 5px 1rem 2rem rgba(0, 0, 0, 0.4);
+}
+
 /* ANIMATIONS */
 @keyframes moveInLeft {
   0% {
@@ -85,6 +104,10 @@ body {
     transform: translate(0);
   }
 }
+.text--center {
+  text-align: center;
+}
+
 /* BUTTON */
 .btn:link, .btn:visited {
   position: relative;
@@ -157,6 +180,12 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+.section-about {
+  background-color: #f7f7f7;
+  margin-top: -25vh;
+  padding: 25rem 0;
 }
 
 /*# sourceMappingURL=main.css.map */
