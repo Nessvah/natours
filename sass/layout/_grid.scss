@@ -26,4 +26,8 @@
   .col-1of3 {
     width: calc((100% - 2 * #{$horizontal-gap}) / 3);
   }
+
+  .col-1of4 {
+    width: calc((100% - 3 * #{$horizontal-gap}) / 4);
+  }
 }
