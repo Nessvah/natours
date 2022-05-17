@@ -1,0 +1,38 @@
+@use "../abstracts/index" as *;
+
+.card {
+  position: relative;
+  height: 50rem;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+
+  &__side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: $color-white;
+    height: 50rem;
+    width: 100%;
+    transition: all 0.8s ease;
+    backface-visibility: hidden; //hides the back part of an element
+
+    &--front {
+      background-color: $color-white;
+    }
+
+    &--back {
+      background-color: green;
+      transform: rotateY(180deg);
+      // if it's the back side card it's already rotated at 180deg
+    }
+  }
+
+  //.card:hover .card__side
+  &:hover &__side--front {
+    transform: rotateY(180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0deg); //so now it rotates at 0deg
+  }
+}
