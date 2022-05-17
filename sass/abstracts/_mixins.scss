@@ -1,7 +1,13 @@
+@use "../abstracts/variables" as *;
+
 @mixin clearfix {
   &::after {
     content: "";
     display: table;
     clear: both;
   }
+}
+
+@mixin shadow-box {
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
 }

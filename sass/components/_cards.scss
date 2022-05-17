@@ -15,15 +15,23 @@
     width: 100%;
     transition: all 0.8s ease;
     backface-visibility: hidden; //hides the back part of an element
+    border-radius: 4px;
+    @include shadow-box;
 
     &--front {
       background-color: $color-white;
     }
 
     &--back {
-      background-color: green;
       transform: rotateY(180deg);
       // if it's the back side card it's already rotated at 180deg
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        );
+      }
     }
   }
 

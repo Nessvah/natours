@@ -255,13 +255,17 @@ body {
   width: 100%;
   transition: all 0.8s ease;
   backface-visibility: hidden;
+  border-radius: 4px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 }
 .card__side--front {
   background-color: #fff;
 }
 .card__side--back {
-  background-color: green;
   transform: rotateY(180deg);
+}
+.card__side--back-1 {
+  background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
 }
 .card:hover .card__side--front {
   transform: rotateY(180deg);
