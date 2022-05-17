@@ -224,8 +224,8 @@ body {
   padding: 2.4rem;
   text-align: center;
   border-radius: 3px;
-  box-shadow: 0 1.4rem 4rem rgba(0, 0, 0, 0.15);
   transition: all 0.2s;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 }
 .feature-box__icon {
   font-size: 6rem;
@@ -250,12 +250,12 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  color: #fff;
   height: 50rem;
   width: 100%;
   transition: all 0.8s ease;
   backface-visibility: hidden;
   border-radius: 4px;
+  overflow: hidden;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 }
 .card__side--front {
@@ -268,10 +268,26 @@ body {
   background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
 }
 .card:hover .card__side--front {
-  transform: rotateY(180deg);
+  transform: rotateY(-180deg);
 }
 .card:hover .card__side--back {
   transform: rotateY(0deg);
+}
+.card__picture {
+  background-size: cover;
+  height: 24rem;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+.card__picture--1 {
+  background-image: url(/img/nat-5.jpg), linear-gradient(to right bottom, #ffb900, #ff7730);
+  background-blend-mode: screen;
+}
+.card__picture--2 {
+  background-image: url(/img/nat-5.jpg);
+}
+.card__picture--3 {
+  background-image: url(/img/nat-5.jpg);
 }
 
 .header {
@@ -280,6 +296,7 @@ body {
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.801), rgba(40, 180, 133, 0.801)), url(/img/hero.jpg);
   background-size: cover;
   background-position: top;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 .header__logo-container {

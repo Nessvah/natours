@@ -10,12 +10,13 @@
     position: absolute;
     top: 0;
     left: 0;
-    color: $color-white;
+
     height: 50rem;
     width: 100%;
     transition: all 0.8s ease;
     backface-visibility: hidden; //hides the back part of an element
     border-radius: 4px;
+    overflow: hidden; //background img was overflowing parent removing the border radius
     @include shadow-box;
 
     &--front {
@@ -37,10 +38,35 @@
 
   //.card:hover .card__side
   &:hover &__side--front {
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
   }
 
   &:hover &__side--back {
     transform: rotateY(0deg); //so now it rotates at 0deg
+  }
+
+  &__picture {
+    background-size: cover;
+    height: 24rem;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+    &--1 {
+      background-image: url(/img/nat-5.jpg),
+        linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        );
+      background-blend-mode: screen;
+    }
+
+    &--2 {
+      background-image: url(/img/nat-5.jpg);
+    }
+
+    &--3 {
+      background-image: url(/img/nat-5.jpg);
+    }
   }
 }
