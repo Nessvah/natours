@@ -7,4 +7,18 @@
   box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
   background-color: $color-white;
   border-radius: 3px;
+  font-size: $default-size;
+
+  &__round {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    background-color: pink;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(
+      50% at 50% 50%
+    ); //for this to work the element needs to float and safari thats work so we need webkit and needs height and width defined
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+  }
 }

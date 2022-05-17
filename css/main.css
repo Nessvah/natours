@@ -127,8 +127,24 @@ body {
   text-align: center;
 }
 
+.marg-top-l {
+  margin-top: 8rem;
+}
+
 .marg-top-xl {
   margin-top: 10rem;
+}
+
+.marg-bottom-s {
+  margin-bottom: 1.5rem;
+}
+
+.marg-bottom-m {
+  margin-bottom: 4rem;
+}
+
+.marg-bottom-l {
+  margin-bottom: 8rem;
 }
 
 /* BUTTON */
@@ -387,6 +403,17 @@ body {
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
   background-color: #fff;
   border-radius: 3px;
+  font-size: 1.6rem;
+}
+.stories__round {
+  width: 15rem;
+  height: 15rem;
+  float: left;
+  background-color: pink;
+  -webkit-shape-outside: circle(50% at 50% 50%);
+  shape-outside: circle(50% at 50% 50%);
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
 }
 
 .header {
