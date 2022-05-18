@@ -457,6 +457,12 @@ body {
   height: 100%;
   z-index: -5;
   opacity: 0.15;
+  overflow: hidden;
+}
+.bg-video__content {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .header {
