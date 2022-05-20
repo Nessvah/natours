@@ -9,23 +9,46 @@
     width: 90%;
     display: block;
     font-family: inherit;
+    color: inherit;
     font-size: 1.5rem;
     padding: 1.6rem 2rem;
     border-radius: 2px;
     background-color: rgba($color-white, 0.6);
     border: none;
+    transition: all 0.3s;
 
     //so that we can not see the transaction to focus on margins
     border-bottom: 3px solid transparent;
-  }
 
-  &__input:focus {
-    outline: none;
-    //always make the focus element visible in some way
-    box-shadow: 0 1rem 2rem rgba($color-black, $alpha: 0.1);
-    border-bottom: 3px solid $color-primary;
+    &:focus {
+      outline: none;
+      //always make the focus element visible in some way
+      box-shadow: 0 1rem 2rem rgba($color-black, $alpha: 0.1);
+      border-bottom: 3px solid $color-primary;
+
+      &:invalid {
+        border-bottom: 3px solid $color-secondary-dark;
+      }
+    }
+
+    &::-webkit-input-placeholder {
+      color: $color-grey-2;
+    }
   }
 
   &__label {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: 0.7rem;
+    transition: all 0.3s;
+  }
+
+  //style the label which is an adjacent sibling of input
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden; //cant animate visibility so we need opacity
+    transform: translateY(-4rem);
   }
 }
