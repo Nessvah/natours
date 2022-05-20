@@ -569,6 +569,11 @@ issues that might arise with some styling */
   left: 0;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 5000;
+  transition: all 0.3s;
+}
+.popup:target {
+  opacity: 1;
+  visibility: visible;
 }
 .popup__content {
   position: absolute;

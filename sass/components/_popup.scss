@@ -10,6 +10,13 @@
   left: 0;
   background-color: rgba($color-black, 0.8);
   z-index: 5000;
+  transition: all 0.3s;
+
+  //To open popup when we click on an anchor tag with the target  (id)
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
 
   &__content {
     @include absoluteXY;
