@@ -11,10 +11,48 @@
 
   &__content {
     @include absoluteXY;
+    display: table;
     width: 75%;
-    height: 50rem;
     background-color: $color-white;
     box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
-    border-radius: 2px;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  &__left {
+    width: 33.333333%;
+    display: table-cell;
+  }
+
+  &__right {
+    height: 66.6666667%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 3rem 5rem;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+
+    //New
+
+    -moz-column-count: 2;
+    -moz-column-gap: 4rem; //1em here is 14px
+    -moz-column-rule: 1px solid $color-grey-2;
+
+    column-count: 2;
+    column-gap: 4rem;
+    column-rule: 1px solid $color-grey-2;
+
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto; //This needs a specified lang in html in order to work correctly
   }
 }
