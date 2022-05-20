@@ -716,6 +716,10 @@ issues that might arise with some styling */
   background-size: 235%;
   transition: all 0.4s;
 }
+.nav__link:link span, .nav__link:visited span {
+  margin-right: 1.5rem;
+  display: inline-block;
+}
 .nav__link:hover, .nav__link:active {
   color: #55c57a;
   background-position: 100%;
