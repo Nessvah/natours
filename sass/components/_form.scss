@@ -1,0 +1,31 @@
+@use "../abstracts/index" as *;
+
+.form {
+  &__group:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  &__input {
+    width: 90%;
+    display: block;
+    font-family: inherit;
+    font-size: 1.5rem;
+    padding: 1.6rem 2rem;
+    border-radius: 2px;
+    background-color: rgba($color-white, 0.6);
+    border: none;
+
+    //so that we can not see the transaction to focus on margins
+    border-bottom: 3px solid transparent;
+  }
+
+  &__input:focus {
+    outline: none;
+    //always make the focus element visible in some way
+    box-shadow: 0 1rem 2rem rgba($color-black, $alpha: 0.1);
+    border-bottom: 3px solid $color-primary;
+  }
+
+  &__label {
+  }
+}
