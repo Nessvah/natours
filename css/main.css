@@ -148,7 +148,7 @@ body {
 }
 
 /* BUTTON */
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   position: relative;
   display: inline-block;
   text-decoration: none;
@@ -158,16 +158,19 @@ body {
   transition: all 0.2s;
   /* making animation more natural */
   font-size: 1.6rem;
+  border: none;
+  cursor: pointer;
 }
-.btn:hover {
+.btn:hover, .btn:focus {
   transform: translateY(-4px);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
 }
-.btn:hover::after {
+.btn:hover::after, .btn:focus::after {
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
 }
 .btn:active {
+  outline: none;
   transform: translateY(-1px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
 }
@@ -465,6 +468,13 @@ body {
   object-fit: cover;
 }
 
+/* IMPORTANT: 
+the radio buttons that are styled, which are basically replaced, become inaccessible
+to keyboard users because the spacebar doesn't work on that. 
+One possible solution for this problem is to use JS to listen for keydown
+events that match the spacebar and add the checked class to the appropriate 
+hidden button. We should always plan for accessibility and be aware of their 
+issues that might arise with some styling */
 .form__group:not(:last-child) {
   margin-bottom: 2rem;
 }
