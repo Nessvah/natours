@@ -63,6 +63,10 @@ issues that might arise with some styling */
   &__radio-group {
     width: 48%;
     display: inline-block;
+
+    &:last-child {
+      margin-bottom: 2rem;
+    }
   }
 
   &__radio-input {

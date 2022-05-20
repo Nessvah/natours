@@ -519,6 +519,9 @@ issues that might arise with some styling */
   width: 48%;
   display: inline-block;
 }
+.form__radio-group:last-child {
+  margin-bottom: 2rem;
+}
 .form__radio-input {
   display: none;
 }
