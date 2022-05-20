@@ -1,6 +1,20 @@
 @use "../abstracts/index" as *;
 
 .popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba($color-black, 0.8);
+  z-index: 5000;
+
   &__content {
+    @include absoluteXY;
+    width: 75%;
+    height: 50rem;
+    background-color: $color-white;
+    box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
+    border-radius: 2px;
   }
 }
