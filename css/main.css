@@ -873,7 +873,7 @@ issues that might arise with some styling */
   transform: skewY(-6deg);
 }
 .section-features > * {
-  transform: skewY(7deg);
+  transform: skewY(6deg);
 }
 
 .section-tours {
