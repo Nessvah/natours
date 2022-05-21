@@ -37,27 +37,33 @@ $breakpoint argument choices:
 - big-desktop
 */
 
+// I'll use em and not rem on brekpoints because rems in some browsers tend to work incorrect
+
+//1em = 16px 600/16 37.5em
 @mixin responsive($breakpoint) {
   @if $breakpoint == phone {
-    @media (max-width: 600px) {
+    @media (max-width: 37.5em) {
       @content;
     }
   }
 
+  // 900/16 56.25em
   @if $breakpoint == tab-portrait {
-    @media (max-width: 900px) {
+    @media (max-width: 56.25em) {
       @content;
     }
   }
 
+  // 1200/16 75em
   @if $breakpoint == tab-landscape {
-    @media (max-width: 1200px) {
+    @media (max-width: 75em) {
       @content;
     }
   }
 
+  // 1800/16 112.5em
   @if $breakpoint == big-desktop {
-    @media (min-width: 1800px) {
+    @media (min-width: 112.5em) {
       @content;
     }
   }
