@@ -1,3 +1,17 @@
+/* 
+0 - 600px - phone
+600 - 900px -tablet portrait
+900px - 1200px - tablet landscape
+1200px - 1800px - desktop (where our normal style apply)
+1800px + - big desktops
+*/
+/*
+$breakpoint argument choices: 
+- phone
+- tab-portrait
+- tab-landscape
+- big-desktop
+*/
 *,
 *::after,
 *::before {
@@ -8,6 +22,11 @@
 
 html {
   font-size: 62.5%;
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 45%;
+  }
 }
 
 body {
