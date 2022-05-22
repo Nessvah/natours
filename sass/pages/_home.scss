@@ -70,8 +70,6 @@
 }
 
 .booking {
-  height: 50rem;
-
   //Solid color gradient effect
   background-image: linear-gradient(
       105deg,
@@ -81,12 +79,40 @@
     ),
     url(/img/nat-10.jpg);
 
-  background-size: cover; //we can use numbers like 100%
+  background-size: 100%; //we can use numbers like 100%
   border-radius: 4px;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+  @include responsive(tab-landscape) {
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-white, 0.8) 0%,
+        rgba($color-white, 0.8) 70%,
+        transparent 70%
+      ),
+      url(/img/nat-10.jpg);
+    background-size: cover;
+  }
+
+  @include responsive(tab-portrait) {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-white, 0.8) 0%,
+        rgba($color-white, 0.8) 100%
+      ),
+      url(/img/nat-10.jpg);
+  }
 
   &__form {
     width: 50%;
     padding: 6rem;
+
+    @include responsive(tab-landscape) {
+      width: 65%;
+    }
+
+    @include responsive(tab-portrait) {
+      width: 100%;
+    }
   }
 }

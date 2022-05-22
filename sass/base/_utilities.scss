@@ -23,6 +23,10 @@
   @include responsive(tab-portrait) {
     margin-bottom: 3rem;
   }
+
+  @include responsive(phone) {
+    margin-bottom: 2rem;
+  }
 }
 .marg-bottom-l {
   margin-bottom: 8rem;

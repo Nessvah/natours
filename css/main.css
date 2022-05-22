@@ -200,6 +200,11 @@ body {
     margin-bottom: 3rem;
   }
 }
+@media (max-width: 37.5em) {
+  .marg-bottom-m {
+    margin-bottom: 2rem;
+  }
+}
 
 .marg-bottom-l {
   margin-bottom: 8rem;
@@ -647,6 +652,11 @@ issues that might arise with some styling */
   transition: all 0.3s;
   border-bottom: 3px solid transparent;
 }
+@media (max-width: 56.25em) {
+  .form__input {
+    width: 100%;
+  }
+}
 .form__input:focus {
   outline: none;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
@@ -677,6 +687,12 @@ issues that might arise with some styling */
 }
 .form__radio-group:last-child {
   margin-bottom: 2rem;
+}
+@media (max-width: 56.25em) {
+  .form__radio-group {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
 }
 .form__radio-input {
   display: none;
@@ -716,7 +732,7 @@ issues that might arise with some styling */
 }
 
 .popup {
-  opacity: 0;
+  opacity: 1;
   visibility: hidden;
   height: 100vh;
   width: 100%;
@@ -742,9 +758,25 @@ issues that might arise with some styling */
   transform: translate(-50%, -50%) scale(0);
   transition: all 0.4s 0.2s;
 }
+@media (max-width: 56.25em) {
+  .popup__content {
+    width: 90%;
+  }
+}
+@media (max-width: 37.5em) {
+  .popup__content {
+    display: block;
+    height: 45rem;
+  }
+}
 .popup__left {
   width: 33.333333%;
   display: table-cell;
+}
+@media (max-width: 56.25em) {
+  .popup__left {
+    display: none;
+  }
 }
 .popup__right {
   height: 66.6666667%;
@@ -752,9 +784,22 @@ issues that might arise with some styling */
   vertical-align: middle;
   padding: 3rem 5rem;
 }
+@media (max-width: 37.5em) {
+  .popup__right {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 6rem 2rem 3rem;
+  }
+}
 .popup__img {
   display: block;
   width: 100%;
+}
+@media (max-width: 75em) {
+  .popup__img {
+    padding-top: 1.5rem;
+  }
 }
 .popup__text {
   font-size: 1.4rem;
@@ -769,6 +814,13 @@ issues that might arise with some styling */
   -ms-hyphens: auto;
   -webkit-hyphens: auto;
   hyphens: auto;
+}
+@media (max-width: 37.5em) {
+  .popup__text {
+    display: flex;
+    overflow: hidden;
+    max-height: 15ch;
+  }
 }
 .popup:target {
   opacity: 1;
@@ -787,6 +839,12 @@ issues that might arise with some styling */
   text-decoration: none;
   display: inline-block;
   line-height: 1;
+}
+@media (max-width: 37.5em) {
+  .popup__close:link, .popup__close:visited {
+    top: 1.5rem;
+    right: 1.5rem;
+  }
 }
 .popup__close:hover {
   color: #55c57a;
@@ -999,9 +1057,9 @@ issues that might arise with some styling */
   height: 100vh;
   position: fixed;
   top: 0;
-  left: 0;
+  left: -1000px;
   z-index: 1250;
-  opacity: 0;
+  opacity: 1;
   width: 0;
   transition: all 0.8s cubic-bezier(0.63, -0.55, 0.265, 1.55);
 }
@@ -1044,6 +1102,7 @@ issues that might arise with some styling */
 .nav__checkbox:checked ~ .nav__navigation {
   opacity: 1;
   width: 100%;
+  left: 0;
 }
 .nav__icon {
   position: relative;
@@ -1148,15 +1207,35 @@ issues that might arise with some styling */
 }
 
 .booking {
-  height: 50rem;
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 50%), url(/img/nat-10.jpg);
-  background-size: cover;
+  background-size: 100%;
   border-radius: 4px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+@media (max-width: 75em) {
+  .booking {
+    background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 70%, transparent 70%), url(/img/nat-10.jpg);
+    background-size: cover;
+  }
+}
+@media (max-width: 56.25em) {
+  .booking {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%), url(/img/nat-10.jpg);
+  }
 }
 .booking__form {
   width: 50%;
   padding: 6rem;
+}
+@media (max-width: 75em) {
+  .booking__form {
+    width: 65%;
+  }
+}
+@media (max-width: 56.25em) {
+  .booking__form {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

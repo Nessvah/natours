@@ -28,6 +28,10 @@ issues that might arise with some styling */
     //so that we can not see the transaction to focus on margins
     border-bottom: 3px solid transparent;
 
+    @include responsive(tab-portrait) {
+      width: 100%;
+    }
+
     &:focus {
       outline: none;
       //always make the focus element visible in some way
@@ -65,6 +69,11 @@ issues that might arise with some styling */
     display: inline-block;
 
     &:last-child {
+      margin-bottom: 2rem;
+    }
+
+    @include responsive(tab-portrait) {
+      width: 100%;
       margin-bottom: 2rem;
     }
   }

@@ -58,9 +58,9 @@
     height: 100vh;
     position: fixed;
     top: 0;
-    left: 0;
+    left: -1000px; //This will remove the links out of the page so that we can't click on it
     z-index: 1250;
-    opacity: 0;
+    opacity: 1;
     //Hide the cursor for links when it's transparent
     width: 0;
     transition: all 0.8s cubic-bezier(0.63, -0.55, 0.265, 1.55);
@@ -123,6 +123,7 @@
     //Links show up when checkbox is checked
     opacity: 1;
     width: 100%;
+    left: 0;
   }
 
   //HAMBURGUER MENU

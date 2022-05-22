@@ -1,7 +1,7 @@
 @use "../abstracts/index" as *;
 
 .popup {
-  opacity: 0;
+  opacity: 1;
   visibility: hidden;
   height: 100vh;
   width: 100%;
@@ -25,11 +25,24 @@
     //needs another translate because we can only have one transform and the mixin uses transform
     transform: translate(-50%, -50%) scale(0);
     transition: all 0.4s 0.2s;
+
+    @include responsive(tab-portrait) {
+      width: 90%;
+    }
+
+    @include responsive(phone) {
+      display: block;
+      height: 45rem;
+    }
   }
 
   &__left {
     width: 33.333333%;
     display: table-cell;
+
+    @include responsive(tab-portrait) {
+      display: none;
+    }
   }
 
   &__right {
@@ -37,11 +50,22 @@
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
+
+    @include responsive(phone) {
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 6rem 2rem 3rem;
+    }
   }
 
   &__img {
     display: block;
     width: 100%;
+
+    @include responsive(tab-landscape) {
+      padding-top: 1.5rem;
+    }
   }
 
   &__text {
@@ -62,6 +86,12 @@
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto; //This needs a specified lang in html in order to work correctly
+
+    @include responsive(phone) {
+      display: flex;
+      overflow: hidden;
+      max-height: 15ch;
+    }
   }
 
   //To open popup when we click on an anchor tag with the target  (id)
@@ -86,6 +116,11 @@
       text-decoration: none;
       display: inline-block;
       line-height: 1;
+
+      @include responsive(phone) {
+        top: 1.5rem;
+        right: 1.5rem;
+      }
     }
 
     &:hover {
