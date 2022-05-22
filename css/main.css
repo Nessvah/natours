@@ -41,13 +41,21 @@ html {
 
 body {
   box-sizing: border-box;
+  padding: 3rem;
+}
+@media (max-width: 56.25em) {
+  body {
+    padding: 0;
+  }
+}
+
+body {
   font-family: "Lato", sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.7;
   /* 1.7 times bigger */
   color: #777;
-  padding: 3rem;
 }
 
 .hero-heading {
@@ -69,12 +77,23 @@ body {
   animation-timing-function: ease-in-out;
   */
 }
+@media (max-width: 37.5em) {
+  .hero-heading--main {
+    letter-spacing: 1rem;
+    font-size: 5rem;
+  }
+}
 .hero-heading--sub {
   display: block;
   font-size: 2rem;
   font-weight: 400;
   letter-spacing: 1.7rem;
   animation: moveInRight 1.5s ease-in-out;
+}
+@media (max-width: 37.5em) {
+  .hero-heading--sub {
+    letter-spacing: 0.5rem;
+  }
 }
 
 .heading-secondary {
@@ -90,6 +109,16 @@ body {
   color: transparent;
   z-index: 5;
   transition: all 0.2s;
+}
+@media (max-width: 56.25em) {
+  .heading-secondary {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .heading-secondary {
+    font-size: 2.5rem;
+  }
 }
 .heading-secondary:hover {
   transform: skewY(2deg) skewX(5deg);
