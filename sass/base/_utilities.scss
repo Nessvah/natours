@@ -1,7 +1,10 @@
+@use "../abstracts/index" as *;
+
 .text-center {
   text-align: center;
 }
 
+// MARGIN TOP
 .marg-top-l {
   margin-top: 8rem;
 }
@@ -9,12 +12,22 @@
   margin-top: 10rem;
 }
 
+//MARGIN BOTTOM
+
 .marg-bottom-s {
   margin-bottom: 1.5rem;
 }
 .marg-bottom-m {
   margin-bottom: 4rem;
+
+  @include responsive(tab-portrait) {
+    margin-bottom: 3rem;
+  }
 }
 .marg-bottom-l {
   margin-bottom: 8rem;
+
+  @include responsive(tab-portrait) {
+    margin-bottom: 5rem;
+  }
 }
