@@ -698,6 +698,12 @@ issues that might arise with some styling */
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
+@media (max-width: 37.5em) {
+  .header {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
+}
 .header__logo-container {
   position: absolute;
   top: 4rem;
@@ -722,6 +728,17 @@ issues that might arise with some styling */
 .row:not(:last-child) {
   margin-bottom: 8rem;
 }
+@media (max-width: 56.25em) {
+  .row:not(:last-child) {
+    margin-bottom: 6rem;
+  }
+}
+@media (max-width: 56.25em) {
+  .row {
+    max-width: 50rem;
+    padding: 0 3rem;
+  }
+}
 .row::after {
   content: "";
   display: table;
@@ -732,6 +749,17 @@ issues that might arise with some styling */
 }
 .row [class^=col-]:not(:last-child) {
   margin-right: 2rem;
+}
+@media (max-width: 56.25em) {
+  .row [class^=col-]:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 6rem;
+  }
+}
+@media (max-width: 56.25em) {
+  .row [class^=col-] {
+    width: 100% !important;
+  }
 }
 .row .col-1of2 {
   width: calc((100% - 2rem) / 2);
@@ -749,6 +777,11 @@ issues that might arise with some styling */
   padding: 10rem 0;
   font-size: 1.4rem;
 }
+@media (max-width: 56.25em) {
+  .footer {
+    padding: 8rem 0;
+  }
+}
 .footer__logo-container {
   text-align: center;
   margin-bottom: 8rem;
@@ -761,6 +794,12 @@ issues that might arise with some styling */
   border-top: 1px solid #777;
   padding-top: 2rem;
   display: inline-block;
+}
+@media (max-width: 56.25em) {
+  .footer__nav {
+    width: 100% !important;
+    text-align: center;
+  }
 }
 .footer__list {
   list-style: none;
@@ -790,6 +829,12 @@ issues that might arise with some styling */
   width: 80%;
   float: right;
 }
+@media (max-width: 56.25em) {
+  .footer__copyright {
+    width: 100%;
+    float: none;
+  }
+}
 
 .nav__checkbox {
   display: none;
@@ -807,6 +852,18 @@ issues that might arise with some styling */
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
   z-index: 1500;
 }
+@media (max-width: 56.25em) {
+  .nav__btn {
+    top: 4rem;
+    right: 4rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .nav__btn {
+    top: 3rem;
+    right: 3rem;
+  }
+}
 .nav__background {
   height: 6rem;
   width: 6rem;
@@ -817,6 +874,18 @@ issues that might arise with some styling */
   background-image: radial-gradient(#7ed56f, #28b485);
   z-index: 1000;
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+@media (max-width: 56.25em) {
+  .nav__background {
+    top: 4.5rem;
+    right: 4.5rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .nav__background {
+    top: 3.5rem;
+    right: 3.5rem;
+  }
 }
 .nav__navigation {
   height: 100vh;

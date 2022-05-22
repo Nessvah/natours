@@ -1,5 +1,4 @@
-@use "../abstracts/variables" as *;
-@use "../abstracts/mixins" as *;
+@use "../abstracts/index" as *;
 
 .row {
   max-width: $grid-width;
@@ -7,6 +6,15 @@
 
   &:not(:last-child) {
     margin-bottom: $vertical-gap;
+
+    @include responsive(tab-portrait) {
+      margin-bottom: $vertical-gap-s;
+    }
+  }
+
+  @include responsive(tab-portrait) {
+    max-width: 50rem;
+    padding: 0 3rem;
   }
 
   @include clearfix;
@@ -16,6 +24,15 @@
 
     &:not(:last-child) {
       margin-right: $horizontal-gap;
+
+      @include responsive(tab-portrait) {
+        margin-right: 0;
+        margin-bottom: $vertical-gap-s;
+      }
+    }
+
+    @include responsive(tab-portrait) {
+      width: 100% !important;
     }
   }
 
