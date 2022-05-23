@@ -31,7 +31,7 @@
       50% at 50% 50%
     ); //for this to work the element needs to float and safari thats work so we need webkit and needs height and width defined
 
-    transform: translateX(-3rem) skewX(12deg);
+    transform: translateX(-3rem) skewX(12deg) translateY(-2rem);
     position: relative;
     overflow: hidden;
 
@@ -52,7 +52,7 @@
   }
 
   &__text {
-    transform: skewX(12deg);
+    transform: skewX(12deg) translateY(-1rem);
 
     @include responsive(phone) {
       transform: skewX(0);

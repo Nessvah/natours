@@ -1,6 +1,7 @@
 @use "../abstracts/index" as *;
 
 .feature-box {
+  height: 34rem;
   background-color: rgba($color-white, 0.8);
   font-size: 1.5rem;
   padding: 2.4rem;
