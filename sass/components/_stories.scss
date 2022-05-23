@@ -30,11 +30,15 @@
     shape-outside: circle(
       50% at 50% 50%
     ); //for this to work the element needs to float and safari thats work so we need webkit and needs height and width defined
-    -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
+
     transform: translateX(-3rem) skewX(12deg);
     position: relative;
     overflow: hidden;
+
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+    }
 
     @include responsive(phone) {
       transform: translateX(-3rem) skewX(0);
