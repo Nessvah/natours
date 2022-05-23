@@ -1,0 +1,19 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "An UI for a website about tours into the nature.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nessvah/natours.git"
+  },
+  "author": "Silvia Vanessa (Nessvah)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nessvah/natours/issues"
+  },
+  "homepage": "https://github.com/Nessvah/natours#readme"
+}
