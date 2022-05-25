@@ -1,6 +1,6 @@
 # Natours
 
-A brief description of whati this project does and who it's for
+A fully responsive and beautiful webpage for a tours company created with only HTML and CSS (SCSS).
 
 ## Demo
 
@@ -8,20 +8,36 @@ A brief description of whati this project does and who it's for
 
 ## Table of contents
 
-- [Overview](#overview)
-- [Screenshots](#screenshots)
-- [Features](#features)
-- [FAQ](#faq)
-  - [How to install Sass through CLI using npm](#how-to-install-sass-via-command-line-using-npm)
-  - [How to compile one particular file](#how-to-compile-one-particular-file)
-  - [How to watch for changes in individual files](#how-to-watch-for-changes-in-individual-files)
-  - [How to watch for any changes without re-compiling](#how-to-watch-for-changes-in-multiple-files)
-- [Future optimizations](#future-optimizations)
-- [Acknowledgements](#acknowledgements)
-- [Authors](#authors)
-- [Licenses](#license)
+- [Natours](#natours)
+  - [Demo](#demo)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+  - [Screenshots](#screenshots)
+  - [Features](#features)
+  - [FAQ](#faq)
+    - [How to install Sass via Command Line using NPM](#how-to-install-sass-via-command-line-using-npm)
+    - [How to compile one particular file](#how-to-compile-one-particular-file)
+    - [How to watch for changes in individual files](#how-to-watch-for-changes-in-individual-files)
+    - [How to watch for changes in multiple files without re-compiling](#how-to-watch-for-changes-in-multiple-files-without-re-compiling)
+  - [Future optimizations](#future-optimizations)
+  - [Acknowledgements](#acknowledgements)
+  - [Authors](#authors)
+  - [License](#license)
 
 ## Overview
+
+This webpage was developed in the old way of building layouts of all sizes, using the float CSS property.
+Still in use, but getting outdated.
+
+- **Why use a float layout on this project?**
+
+The focus of this project is on using modern CSS properties and techniques: clips, transforms, animations, background videos, etc.
+
+Even though flexbox and CSS grid are more modern and easier to use, every web developer should still know how the float layouts work. As professional developers, our job will include working with older CSS codebases, which will contain float layouts.
+
+This project was also designed using the desktop-first approach which I think it's easier when we have a lot more going on on bigger screens and we need to consider that. After that, it's just a matter of shrinking and making everything responsive and nicely fitted.
+
+<hr>
 
 ## Screenshots
 
@@ -37,10 +53,12 @@ A brief description of whati this project does and who it's for
 
 ## Features
 
-- Light/dark mode toggle
-- Live previews
-- Fullscreen mode
-- Cross platform
+- Toggle menu
+- Pop Up
+- Fully Responsive
+- Animations
+- Custom Form
+
 <hr>
 
 ## FAQ
