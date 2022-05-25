@@ -1,6 +1,6 @@
 # Natours
 
-A fully responsive and beautiful webpage for a tours company created with only HTML and CSS (SCSS).
+A fully responsive and beautiful webpage for a tours company created with only HTML and CSS (SCSS). There are some optimizations awaiting to be implemented to this project in JavaScript. See **Future Optimizations** below for more information.
 
 ## Demo
 
