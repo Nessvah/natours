@@ -12,6 +12,10 @@
   &__heading {
     text-align: center;
     margin-bottom: 8rem;
+
+    @include responsive(tab-portrait) {
+      margin-bottom: 6rem;
+    }
   }
 }
 
