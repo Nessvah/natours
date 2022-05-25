@@ -81,6 +81,8 @@ This project was also designed using the desktop-first approach which I think it
 
 For more information about the instalation process or others way to install and/or use it, please check their [website](https://sass-lang.com/install).
 
+<hr>
+
 ### How to compile one particular file
 
 You'll need to tell Sass which file to build from, and where to output CSS to.
@@ -89,6 +91,8 @@ For example, running:
 `sass input.scss output.css`
 
 Tells sass to take a single Sass file, `input.scs`, and compile that file to `output.css`.
+
+<hr>
 
 ### How to watch for changes in individual files
 
@@ -99,6 +103,8 @@ CSS each time you save your Sass.
 You'd just add the watch flag to your command, like so:
 
 `sass --watch input.scss output.css`
+
+<hr>
 
 ### How to watch for changes in multiple files without re-compiling
 
@@ -114,7 +120,8 @@ to the **public/stylesheets** folder.
 
 ## Future optimizations
 
-What optimizations did you make in your code? E.g. refactors, performance improvements, accessibility
+- [ ] make the hamburguer menu functional with JavaScript;
+- [ ] make the popup effect able to close when the user clicks outside the container (JavaScript)
 
 <hr>
 
@@ -122,7 +129,7 @@ What optimizations did you make in your code? E.g. refactors, performance improv
 
 Credits for the design of this project:
 
-- [Jonas](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
+- [Jonas Schmedtman](https://github.com/jonasschmedtmann)
 
 <hr>
 
@@ -130,7 +137,7 @@ Credits for the design of this project:
 
 Project developed by:
 
-- [@nessvah](https://www.github.com/octokatherine) (Sílvia Vanessa)
+- Github - [Nessvah](https://github.com/Nessvah) (Sílvia Vanessa)
 <hr>
 
 ## License
